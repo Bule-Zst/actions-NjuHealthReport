@@ -17,8 +17,8 @@ import utils
 
 if __name__ == '__main__':
     if len(sys.argv) > 1:
-        config.data = json.loads(re.sub('#(.*)\n', '\n', sys.argv[1]).replace("'", '"'))
-        # config.data = json.loads(sys.argv[1].replace("'", '"')) # 我的密码中有 #
+        # config.data = json.loads(re.sub('#(.*)\n', '\n', sys.argv[1]).replace("'", '"'))
+        config.data = json.loads(sys.argv[1].replace("'", '"')) # 我的密码中有 #
     if utils.get_GMT8_timestamp() > utils.str_to_timestamp(config.data['deadline'], '%Y-%m-%d'):
         logging.info("超出填报日期")
         exit(-1)
