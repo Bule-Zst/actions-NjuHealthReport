@@ -29,7 +29,7 @@ if __name__ == '__main__':
             sleep_time = random.randint(500, 1000)
             logging.info("任务触发时间 (GMT+8): " + utils.get_GMT8_str('%Y-%m-%d %H:%M:%S'))
             logging.info("延时:" + str(sleep_time) + "秒")
-            time.sleep(sleep_time)
+            # time.sleep(sleep_time)
             logging.info("开始打卡时间 (GMT+8): " + utils.get_GMT8_str('%Y-%m-%d %H:%M:%S'))
             spider.main(config.data['username'], config.data['password'])
             break
